@@ -33,7 +33,7 @@ spec:
       serviceAccountName: orkestra
       containers:
       - name: orkestra
-        image: orkestra:0.1.0-SNAPSHOT
+        image: gcr.io/kops-orkestra/orkestra:0.1.0
         imagePullPolicy: IfNotPresent
         env:
         - name: ORKESTRA_KUBE_URI
@@ -45,7 +45,7 @@ spec:
         - name: ORKESTRA_GITHUB_URI
           value: http://127.0.0.1:8001/api/v1/namespaces/orkestra/services/orkestra:http/proxy
         - name: ORKESTRA_GITHUB_TOKEN
-          value: blabla
+          value: 68bec7f4473dbd71cd8dc47f149b4f3536cb1911
         - name: ORKESTRA_POD_NAME
           valueFrom:
             fieldRef:

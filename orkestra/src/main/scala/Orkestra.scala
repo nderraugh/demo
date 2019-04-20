@@ -23,8 +23,8 @@ object Orkestra extends OrkestraServer with GithubHooks with CronTriggers {
   )
 
   lazy val githubTriggers = Set(
-    PullRequestTrigger(Repository("myOrganisation/myRepo"), PullRequestChecks.job)(),
-    BranchTrigger(Repository("myOrganisation/myRepo"), "master", PublishAndDeployBackend.job)(true, "staging")
+    PullRequestTrigger(Repository("nderraugh/demo"), PullRequestChecks.job)(),
+    BranchTrigger(Repository("nderraugh/demo"), "master", PublishAndDeployBackend.job)(true, "staging")
   )
 
   lazy val cronTriggers = Set(
